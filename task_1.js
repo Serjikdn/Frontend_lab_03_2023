@@ -44,4 +44,21 @@ function createHeaders(number) {
     }
 }
 
-createHeaders(8)
+createHeaders(8);
+
+function dataAnalyzer(...data){
+    let sum = 0;
+    let string = '';
+    for (let item of data){
+        if (parseFloat(item)){
+            sum += parseFloat(item);
+        } else {
+            string === ''? string = item: string += ' ' + item;
+        }
+    }
+    return [sum, string]
+}
+let testData = dataAnalyzer(8, 'Hello', 33, 'World', -5, '!')
+console.log(`Sum = ${testData[0]}\nString: ${testData[1]}`)
+
+
