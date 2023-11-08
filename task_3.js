@@ -18,8 +18,8 @@ console.log(toCamelCase('new_brand_product_'));
 
 
 function toSnakeCase(text) {
-    let words = text.match(/^[a-z1-9]+/g);
-    words = [...words, ...text.match(/([A-Z][a-z1-9]+)/g)];
+    let words = text.match(/^[a-z0-9]+/g);
+    words = [...words, ...text.match(/([A-Z][a-z0-9]+)/g)];
     return words
         .map((word, index) => index !== 0 ? word.charAt(0).toLowerCase() + word.slice(1) : word)
         .join("_");
@@ -27,3 +27,9 @@ function toSnakeCase(text) {
 
 console.log(toSnakeCase('newBrandProduct'));
 
+
+function findHexColor (text){
+    return text.match(/#[A-Fa-f0-9]{3,6}\b/g);
+}
+
+console.log(findHexColor("color: #3f3; background-color: #AA00ef;"));
