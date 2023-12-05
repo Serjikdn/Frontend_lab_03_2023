@@ -1,14 +1,41 @@
-.task2 table td{
-    border: 1px solid black;
-    padding: 8px;
-}
-.task2 table th{
-    border: 1px solid black;
-    padding: 5px;
-    background-color: darkgray;
+a {
+    text-decoration: none;
+    color: green;
 }
 
-.task2 table {
-    border-collapse: collapse;
+body {
+    width: 960px;
+    margin: 0 auto;
+    background-color: black;
+    color: green;
+}
 
+.marquee-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #000;
+    color: #7fff00;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+    /*width: 600px;*/
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.content{
+    border: 1px dashed grey;
 }
