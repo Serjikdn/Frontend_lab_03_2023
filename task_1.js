@@ -13,7 +13,6 @@ function createTable(...text) {
     const tbody = document.createElement('tbody');
     let count = 1;
 
-
     for (let item of text) {
         const row = document.createElement('tr');
         const cell1 = document.createElement('td');
@@ -58,6 +57,7 @@ function dataAnalyzer(...data){
     }
     return [sum, string]
 }
+
 let testData = dataAnalyzer(8, 'Hello', 33, 'World', -5, '!')
 console.log(`Sum = ${testData[0]}\nString: ${testData[1]}`)
 
